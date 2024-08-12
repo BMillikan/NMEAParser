@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+#cmake_minimum_required(VERSION 2.8)
 
 #
 # About the project
@@ -44,6 +44,12 @@ add_library(NMEAParserLib
 	NMEASentenceGSA.h
 	NMEASentenceRMC.cpp
 	NMEASentenceRMC.h
+)
+
+install (TARGETS ${PROJECT_NAME}
+         ARCHIVE DESTINATION ${BASE_PROJECT_LIB_DIR}
+         LIBRARY DESTINATION ${BASE_PROJECT_LIB_DIR}
+         RUNTIME DESTINATION ${BASE_PROJECT_BIN_DIR}
 )
 
 #
